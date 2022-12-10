@@ -14,6 +14,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class GoogleMain {
 
     public final static String CHROME_DRIVER_RAGINI = "/Users/raginiyampalli/opt/homebrew/bin/chromedriver";
+    //TODO
+    public final static String CHROME_DRIVER_KARTHIK = "replace this text with your chrome driver location";
+
 
     public final static String GOOGLE_URL = "https://google.com";
 
@@ -23,8 +26,13 @@ public class GoogleMain {
         System.setProperty("webdriver.chrome.driver",CHROME_DRIVER_RAGINI);
         webDriver.get(GOOGLE_URL);
         Thread.sleep(1000);
-        WebElement feelingLuckyButton = webDriver.findElement(By.id("gbqfbb")); //found
-        //WebElement search = webDriver.findElement(By.id("gNO89b")); //unable to find
+        WebElement searchBar = webDriver.findElement(By.xpath("//*[@title=\"Search\"]"));
+        searchBar.sendKeys("How to make paper planes");
+
+        //TODO : Click is not working.
+        WebElement searchButton = webDriver.findElement(By.xpath("//*[@value=\"Google Search\"]"));
+        searchButton.click();
+
 
 
     }
