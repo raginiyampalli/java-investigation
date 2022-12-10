@@ -8,6 +8,7 @@
     <artifactId>java-investigation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+<<<<<<< HEAD
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -28,4 +29,7 @@
         <maven.compiler.target>18</maven.compiler.target>
     </properties>
 
+=======
+    
+>>>>>>> b230865 (Revert "Adding dependencies - junit and selenium")
 </project>
