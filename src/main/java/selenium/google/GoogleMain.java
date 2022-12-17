@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *  1. Open google.com
  *  2. Enter "how to make paper air planes"
  *  3. Click on "Google Search" button.
+ *  4. Close the browser.
  */
 public class GoogleMain {
 
@@ -25,15 +26,15 @@ public class GoogleMain {
         //TODO : Get this from environmental variables.
         System.setProperty("webdriver.chrome.driver",CHROME_DRIVER_RAGINI);
         webDriver.get(GOOGLE_URL);
-        Thread.sleep(1000);
+        Thread.sleep(300);
         WebElement searchBar = webDriver.findElement(By.xpath("//*[@title=\"Search\"]"));
         searchBar.sendKeys("How to make paper planes");
 
-        //TODO : Click is not working.
+
         WebElement searchButton = webDriver.findElement(By.xpath("//*[@value=\"Google Search\"]"));
         searchButton.click();
-
-
+        Thread.sleep(300);
+        webDriver.quit();
 
     }
 
